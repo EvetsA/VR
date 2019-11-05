@@ -1,139 +1,235 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sculpting Realities–Mound City</title>
+    <title>Sculpting Realities–Books</title>
     <meta name="description" content="Sculpting Realities day 1 Demo">
     <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script> 
-      
-  
+    <script>
+       <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script> 
+  <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+    
+   
   </head>
   <body>
     <a-scene >
-   
+      
       <a-camera>
     <a-cursor></a-cursor>
   </a-camera>
-
-      <a-assets>
-        <a-asset-item id="what" src="https://cdn.glitch.com/47ddc822-b3a9-4933-8d07-de197996222a%2FmoundSolo.obj?v=1569349773135"></a-asset-item>
-<!--         <an-asset-item id="moundkinda" src="https://cdn.glitch.com/47ddc822-b3a9-4933-8d07-de197996222a%2Fmoundkinda.obj?v=1569206133107" ></an-asset-item> -->
-        
-    </a-assets>
-
+      <a-entity hand-controls="right" controller-cursor></a-entity>
       
-      <a-entity position="-7 0 0" 
-                animation="property: position; to: -7 -10 0; dur: 1500; easing: linear; loop:false; startEvents:mouseenter"
-                animation__2="property: position; to: -7 0 0; dur: 1500; easing: linear; startEvents:mouseleave">
-        <a-obj-model src="#what" scale="1 2 2"  material="side: double" color="#84a341" roughness="1">
-        </a-obj-model>
-      </a-entity>
-      
-        
-      
-      
-      
-      
-      
-      
-<!--       <a-entity animation=“property:position; to: 0 200 0; loop: true; dur: 15000”
-animation__mouseenter=“property: scale; to: 2 2 2; dur: 300; startEvents: mouseenter”
- animation__mouseleave=“property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave”>
- <a-entity src=“#gold” animation=“property: rotation; to: 0 0 720; loop: NaN; dur: 50000” material=“color: #b89f36; normalMap: textures/gold.jpg” geometry=“primitive: icosahedron; radius: 5” rotation=“330.17468849170143 330.175044181235 287.7307993512178" scale=“0.3 0.3 0.3”>
- </a-entity>
- </a-entity>
-    -->
-  
-        
-        
-      <a-assets>
-        <a-asset-item id="who" src="https://cdn.glitch.com/47ddc822-b3a9-4933-8d07-de197996222a%2Fmoundtwo.obj?v=1569351536982" ></a-asset-item>
-        </a-assets>
-
-    
-       <a-obj-model src="#who" scale="1 1 1" position="0 0 -100" material="side: double" color="#84a341" rotation="0 90 0" roughness="1">
-        </a-obj-model>
-      
-      <a-entity position="3.5 0 -25" 
-                animation="property: position; to: 3.5 -10 -25; dur: 2000; easing: linear; loop:false; startEvents:mouseenter"
-                animation__2="property: position; to: 3.5 0 -25; dur: 2000; easing: linear; startEvents:mouseleave">
-       <a-obj-model src="#who" scale="1 1 1" position="3.5 0 -25" material="side: double" color="#84a341" rotation="0 90 0" roughness="1">
-        </a-obj-model>
-       
-      </a-entity>
-      
-      
-    
-      
-      
-        <a-assets>
-        <a-asset-item id="littlemound" src="https://cdn.glitch.com/47ddc822-b3a9-4933-8d07-de197996222a%2Fmoundtwo.obj?v=1569351536982" ></a-asset-item>
-        </a-assets>
-  
-      <a-entity position="4 -0.3 -4" 
-                animation="property: position; to: 4 -10 -4; dur: 1500; easing: linear; loop:false; startEvents:mouseenter"
-                animation__2="property: position; to: 4 -0.3 -4; dur: 1500; easing: linear; startEvents:mouseleave">
-        <a-obj-model src="#littlemound" scale="1 2 0.5" position="4 -0.3 -4" material="side: double" color="#84a341" rotation="0 90 0" roughness="1">
-        </a-obj-model>
-      </a-entity>
-      
-      
-      
-      
-    <a-assets>
-        <a-asset-item id="notherone" src="https://cdn.glitch.com/47ddc822-b3a9-4933-8d07-de197996222a%2Fmoundtwo.obj?v=1569351536982" ></a-asset-item>
-        </a-assets>
-      
-      <a-entity position="-31 0 -5" 
-                animation="property: position; to: -31 -10 -5; dur: 2000; easing: linear; loop:false; startEvents:mouseenter"
-                animation__2="property: position; to: -31 0 -5; dur: 2000; easing: linear; startEvents:mouseleave">
-       <a-obj-model src="#notherone" scale="1 1 1" position="-31 0 -5" material="side: double" color="#84a341" rotation="0 180 0" roughness="1">
-        </a-obj-model>
-       
-      </a-entity>
-      
-      
-    
-      
-      
-      <a-assets>
-    <a-asset-item id="arch" src="https://cdn.glitch.com/47ddc822-b3a9-4933-8d07-de197996222a%2Fscene.gltf?v=1569975350083"></a-asset-item>
-  </a-assets>
-
-      <a-gltf-model src="#arch" scale="0.1 .1 .1"  ></a-gltf-model> 
       
       
        <a-assets>
-        <a-asset-item id="stlouisarch" src="https://cdn.glitch.com/47ddc822-b3a9-4933-8d07-de197996222a%2Fstlouisarch.obj?v=1570074206729" ></a-asset-item>
+        <a-asset-item id="singlebook" src="https://cdn.glitch.com/806d1a06-c2f8-4a43-b46e-01cf0ad93b0e%2Fstanding_single_book.obj?v=1572108272642" ></a-asset-item>
         </a-assets>
-
+        <a-obj-model src="#singlebook" scale="10 10 10" position="14.86111 8.41575 14.33273" material="side: double" rotation="0 180" roughness="1" color=""
+           event-set__mouseenter="material.src: https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2FModel.jpg?v=1572939604282" >
+        </a-obj-model>
+      
+     
+      
+      <a-assets>
+        <a-asset-item id="selfcast" src="https://cdn.glitch.com/806d1a06-c2f8-4a43-b46e-01cf0ad93b0e%2Fselfcast.obj?v=1572636492661" ></a-asset-item>
+        </a-assets>
+     <!--   <a-obj-model src="#selfcast" scale="10 10 10" position="14.86111 10.04889 14.33273" material="side: double" rotation="0 180" roughness="1" obj-model="">
+        </a-obj-model> --> 
+      
+     <a-obj-model src="#selfcast" scale="50 50 50" position="33.92699 20.59296 20.33114" material="side: double" rotation="0 180" roughness="1" color="#41435c" obj-model="">
+        </a-obj-model>
+      
+      <a-obj-model src="#selfcast" scale="50 50 50" position="26.11422 29.79114 -37.2026" material="side: double" rotation="0 270" roughness="1" color="#050936" obj-model="">
+        </a-obj-model>
+      
+      
+      
+      <a-obj-model src="#selfcast" scale="50 50 50" position="-36.53173 42.69436 23.18059" material="side: double" rotation="0 70" roughness="1" color="#8a8dab" obj-model="">
+        </a-obj-model>
+      
+      
+      
+      
+      
+      
+      <a-assets>
+        <a-asset-item id="threebook" src="https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2Fbooks.obj?v=1572977870596" ></a-asset-item>
+        </a-assets>
+<a-obj-model src="#threebook" scale="10 10 10" position="14.25536 9.29996 13.08643" material="side: double" rotation="0 180" roughness="1" color=""
+           event-set__mouseenter="material.src: https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2FModel.jpg?v=1572977815111">
+        </a-obj-model>
+      
+      
+      <a-assets>
+        <a-asset-item id="threebook2" src="https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2Fbooks.obj?v=1572977870596" ></a-asset-item>
+        </a-assets>
+<a-obj-model src="#threebook2" scale="10 10 10" position="2.97663 25.80209 5.53086" material="side: double" rotation="90 90" roughness="1" color=""
+           event-set__mouseenter="material.src: https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2FModel.jpg?v=1572977815111">
+        </a-obj-model>
+      
+      <a-assets>
+        <a-asset-item id="threebook3" src="https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2Fbooks.obj?v=1572977870596" ></a-asset-item>
+        </a-assets>
+<a-obj-model src="#threebook3" scale="10 10 10" position="-2.94976 -18.16499 10.02424" material="side: double" rotation="270 90" roughness="1" obj-model="" color=""
+           event-set__mouseenter="material.src: https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2FModel.jpg?v=1572977815111">
+        </a-obj-model>
+      
+      
     
-       <a-entity position="-10 0 0" 
-                animation="property: position; to: -10 -100 0; dur: 3000; easing: linear; loop:false; startEvents:mouseenter"
-                animation__2="property: position; to: -10 0 0; dur: 3000; easing: linear; startEvents:mouseleave">
-       <a-obj-model src="#stlouisarch" scale="0.03 0.03 0.03" position="-10 0 0" material="side: double" color="#84a341" rotation="0 90 0" roughness="1">
+      
+      
+      <a-assets>
+        <a-asset-item id="openbook" src="https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2Fsaintlouisartmuseum1971.obj?v=1572978597037" ></a-asset-item>
+        </a-assets>
+     <a-obj-model src="#openbook" scale="10 10 10" position="-14.75676 14.54558 -4.27605" material="side: double" rotation="76 78 98"  roughness="1" color=""
+           event-set__mouseenter="material.src: https://cdn.glitch.com/806d1a06-c2f8-4a43-b46e-01cf0ad93b0e%2Fsaintlouisartmuseum1971.jpg?v=1572382219888">
+        </a-obj-model>
+     <!-- <a-asset-item id="openbook-mtl" src="https://cdn.glitch.com/806d1a06-c2f8-4a43-b46e-01cf0ad93b0e%2Fsaintlouisartmuseum1971.mtl?v=1572382118858"></a-asset-item>
+      <a-asset-item id="openbook-jpg" src="https://cdn.glitch.com/806d1a06-c2f8-4a43-b46e-01cf0ad93b0e%2Fsaintlouisartmuseum1971.jpg?v=1572382219888"></a-asset-item> -->
+      
+      
+      <a-assets>
+        <a-asset-item id="openbook2" src="https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2Fsaintlouisartmuseum1971.obj?v=1572978597037" ></a-asset-item>
+        </a-assets>
+     <a-obj-model src="#openbook2" scale="10 10 10" position="5.09269 17.05649 15.67552" material="side: double" rotation="45 134" roughness="1" color=""
+           event-set__mouseenter="material.src: https://cdn.glitch.com/806d1a06-c2f8-4a43-b46e-01cf0ad93b0e%2Fsaintlouisartmuseum1971.jpg?v=1572382219888" >
+        </a-obj-model>
+
+     <!-- <a-asset-item id="openbook2-mtl" src="https://cdn.glitch.com/806d1a06-c2f8-4a43-b46e-01cf0ad93b0e%2Fsaintlouisartmuseum1971.mtl?v=1572382118858"></a-asset-item>
+      <a-asset-item id="openbook2-jpg" src="https://cdn.glitch.com/806d1a06-c2f8-4a43-b46e-01cf0ad93b0e%2Fsaintlouisartmuseum1971.jpg?v=1572382219888"></a-asset-item> --> 
+      
+      
+      
+      
+      
+      
+      
+      
+      <a-assets>
+        <a-asset-item id="wbook" src="https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2Fwbook.obj?v=1572844917879" ></a-asset-item>
+        </a-assets>
+      <a-obj-model src="#wbook" scale="10 10 10" position="10.4089 11.69318 -11.16671" material="" rotation="180 90 180" roughness="1" color=""
+           event-set__mouseenter="material.src: https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2FModel.jpg?v=1572938827544">
+        </a-obj-model>
+      <a-asset-item id="wbook-mtl" src="https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2Fwbook.mtl?v=1572844912395"></a-asset-item>
+      
+      
+     <a-assets>
+        <a-asset-item id="wbook2" src="https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2Fwbook.obj?v=1572844917879" ></a-asset-item>
+        </a-assets>
+      <a-obj-model src="#wbook2" scale="10 10 10" position="-2.20159 17.74404 -9.95079" material="" rotation="90 100 180" roughness="1" color=""
+           event-set__mouseenter="material.src: https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2FModel.jpg?v=1572938827544">
+        </a-obj-model>
+      <a-asset-item id="wbook2-mtl" src="https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2Fwbook.mtl?v=1572844912395"></a-asset-item>
+      
+    
+      
+      
+      <a-assets>
+        <a-asset-item id="triobooks" src="https://cdn.glitch.com/806d1a06-c2f8-4a43-b46e-01cf0ad93b0e%2Ftriobooks.obj?v=1572579285246" ></a-asset-item>
+        </a-assets>
+     <a-obj-model src="#triobooks" scale="10 10 10" position="-11.65823 9.62723 25.58904" material="side: double; #openbook-jpg" rotation="76 180 98" color=""
+           event-set__mouseenter="material.src: https://cdn.glitch.com/806d1a06-c2f8-4a43-b46e-01cf0ad93b0e%2Ftriobooks.jpg?v=1572580447597" roughness="1">
+        </a-obj-model>
+      <a-asset-item id="triobooks-mtl" src="https://cdn.glitch.com/806d1a06-c2f8-4a43-b46e-01cf0ad93b0e%2Ftriobooks.mtl?v=1572579277458"></a-asset-item>
+      <a-asset-item id="triobooks-jpg" src="https://cdn.glitch.com/806d1a06-c2f8-4a43-b46e-01cf0ad93b0e%2Ftriobooks.jpg?v=1572579332059"></a-asset-item>
+      
+      <a-assets>
+        <a-asset-item id="triobooks1" src="https://cdn.glitch.com/806d1a06-c2f8-4a43-b46e-01cf0ad93b0e%2Ftriobooks1.obj?v=1572580377904" ></a-asset-item>
+        </a-assets>
+      <a-obj-model src="#triobooks1" scale="10 10 10" position="-13.23907 17.33823 25.35929" material="" rotation="76 180 98" roughness="1" color=""
+           event-set__mouseenter="material.src: https://cdn.glitch.com/806d1a06-c2f8-4a43-b46e-01cf0ad93b0e%2Ftriobooks.jpg?v=1572580447597" >
+        </a-obj-model>
+      <a-asset-item id="triobooks1-mtl" src="https://cdn.glitch.com/806d1a06-c2f8-4a43-b46e-01cf0ad93b0e%2Ftriobooks1.mtl?v=1572580380422"></a-asset-item>
+      
+            <a-assets>
+        <a-asset-item id="triobooks2" src="https://cdn.glitch.com/806d1a06-c2f8-4a43-b46e-01cf0ad93b0e%2Ftriobooks1.obj?v=1572580377904" ></a-asset-item>
+        </a-assets>
+      <a-obj-model src="#triobooks2" scale="10 10 10" position="24.24459 47.23058 18.5883" material="" rotation="-180 29.999999999999996 90" roughness="1" color=""
+           event-set__mouseenter="material.src: https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2Ftriobooks.jpg?v=1572938988835">
+        </a-obj-model>
+      <a-asset-item id="triobooks2-mtl" src="https://cdn.glitch.com/806d1a06-c2f8-4a43-b46e-01cf0ad93b0e%2Ftriobooks1.mtl?v=1572580380422"></a-asset-item>
+     
+      
+  
+      
+      <a-obj-model src="#singlebook" scale="10 10 10" position="29.93627 9.91185 -21.05223" material="side: double" rotation="180 180 34" roughness="1" color=""
+           event-set__mouseenter="material.src:https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2FModel.jpg?v=1572939604282" >
+        </a-obj-model>
+     
+      
+    <a-obj-model src="#singlebook" scale="10 10 10" position="23.946 8.9245 -14.345" rotation="180 180 34" roughness="1" color="" event-set__mouseenter="material.src:https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2FModel.jpg?v=1572939604282" obj-model="">
         </a-obj-model> 
-      </a-entity>
+      
+      <a-assets>
+        <a-asset-item id="w2" src="https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2Fw2book.obj?v=1572922921561" ></a-asset-item>
+        </a-assets>
+      <a-obj-model src="#w2" scale="10 10 10" position="10.05832 53.14339 4.99294" material="" rotation="-180 29.999999999999996 90" roughness="1" color=""
+           event-set__mouseenter="material.src:https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2FModel.jpg?v=1572978348275">
+        </a-obj-model>
+      <a-asset-item id="w2-mtl" src="https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2Fw2book.mtl?v=1572922914793"></a-asset-item>
+     
+      
+      
+       <a-assets>
+        <a-asset-item id="twoflatbooks" src="https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2Ftwoflatbooks.obj?v=1572923497482" ></a-asset-item>
+        </a-assets>
+     <a-obj-model src="#twoflatbooks" scale="10 10 10" position="-10.46828 7.5616 -16.04508" material="" rotation="" roughness="1" color=""
+           event-set__mouseenter="material.src: https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2FModel.jpg?v=1572977456145">
+        </a-obj-model>
+      <a-asset-item id="twoflatbooks-mtl" src="https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2Ftwoflatbooks.mtl?v=1572923497264"></a-asset-item>
+     
+      
+      
+       <a-assets>
+        <a-asset-item id="twoflatbooks2" src="https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2Ftwoflatbooks.obj?v=1572923497482" ></a-asset-item>
+        </a-assets>
+    <a-obj-model src="#twoflatbooks2" scale="12 12 10" position="11.41646 21.74395 -1.87641" material="" rotation="90 90 270" roughness="1" color=""
+           event-set__mouseenter="material.src: https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2FModel.jpg?v=1572977456145">
+        </a-obj-model>
+ 
+      
+     <!--   <a-entity color="#5c6980" 
+                event-set_mouseenter="color:#ffd21f" > --> 
+      <a-asset-item id="twoflatbooks2-mtl" src="https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2Ftwoflatbooks.mtl?v=1572923497264"></a-asset-item>
+     
       
       
       
       
+      <a-box  position="0 0 -8" rotation="0 0 0 " scale="15 20 1" src="https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2Fweirdblue.jpg?v=1572829738987"  ></a-box>
       
+       <a-box position="0 0 8" rotation="0 0 0 " scale="15 20 1" src="https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2Fweirdblue.jpg?v=1572829738987" ></a-box>
+      
+      <a-box position="-7 0 -2.5" rotation="0 0 0 " scale="1 20 20" src="https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2Fweirdblue.jpg?v=1572829738987"  ></a-box> 
+      
+     <!-- <a-box color="#dedcd5" position="7 0 -2.5" rotation="0 0 0 " scale="1 20 20" ></a-box> -->
+      
+      
+    <!--  <a-box color="#dedcd5" position="0 0 -8" rotation="0 0 0 " scale="15 20 1" ></a-box>
+      
+       <a-box color="#dedcd5" position="0 0 8" rotation="0 0 0 " scale="15 20 1" ></a-box>
+      
+      <a-box color="#dedcd5" position="-7 0 -2.5" rotation="0 0 0 " scale="1 20 20" ></a-box>
+ 
+   <a-box color="#dedcd5" position="7 -6.08846 -2.5" rotation="" scale="1 20 20" material="" geometry=""></a-box> -->
+      
+      
+      
+      
+      <a-box  position="7 -6.08846 -2.5" rotation="" scale="1 20 20" material="" src="https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2Fweirdblue.jpg?v=1572829738987" ></a-box> 
+      
+      <a-assets>
+       
+      </a-assets>
       
       <a-entity id="house" shadow="recieve=true" ></a-entity>
-     
-
-      
-   <a-entity environment="preset: forest; ground: noise;groundColor: #84a341; groundColor2: #789638 ;skyColor: #baeaff;grid: cross" ></a-entity>
-  
-      <a-entity environmentdressing= "scale: 1 0 1" ></a-entity>
-      
-      
-
+      <a-plane position="0 0 0" rotation="-90 0 0" width="15" height="15" src="https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2Fweirdblue.jpg?v=1572829738987"></a-plane>
     
-      <a-sky color="#a1d6ff"
-             ></a-sky>
-        
+      <a-sky color="#dedcd5" src="https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2Fweirdblue.jpg?v=1572829738987" ></a-sky>
+     
+      <!--<a-obj-model src="#singlebook" scale="10 10 10" position="23.70713 31.13918 9.09777" material="color: #FFF; side: double; src: https://cdn.glitch.com/ff523df2-7be4-480c-b713-d2339601a37d%2FModel.jpg?v=1572939604282" rotation="67 180" roughness="1" color="" event-set__mouseenter="" obj-model="">
+        </a-obj-model> -->
+  
 </a-scene>
   </body>
 </html>
